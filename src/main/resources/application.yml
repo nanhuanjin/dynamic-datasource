@@ -16,9 +16,9 @@ spring:
         maxActive: 20
       db2:
         username: root
-        password: 123456
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql:///ssj
+        password: breeze1314520.
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://139.196.224.115:6766/cloud2020?useUnicode=true&characterEncoding=UTF-8&useSSL=false
         initialSize: 5
         minIdle: 5
         maxActive: 20
