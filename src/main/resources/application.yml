@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: dynamic-datasource-service
+  datasource:
+    druid:
+      db1:
+        username: root
+        password: breeze1314520.
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://139.196.224.115:6766/pipe_dream?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+      db2:
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql:///ssj
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:com/breeze/dynamic/datasource/mapper/xml/*.xml
+  typeAliasesPackage: com.breeze.dynamic.datasource.entity
+  global-config:
+    db-config:
+      id-type: auto
